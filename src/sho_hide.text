@@ -1,0 +1,21 @@
+import React,{useState} from 'react';
+import User from './User';
+import './App.css';
+//import Form from './Form';
+
+function App() {
+const[data,setState]=useState(true);
+
+  return (
+    <div className="App">
+      {
+        data?<User/>:"Component removed"
+      }
+      
+     <button onClick={()=>setState(!data)}>Remove Component</button>
+    </div>
+  );
+
+}
+
+export default App;

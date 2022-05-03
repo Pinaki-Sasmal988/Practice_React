@@ -19,7 +19,6 @@ function App() {
       <Table>
         <tbody>
         <tr>
-        <th>ID</th>
           <th>Name</th>
           <th>Email</th>
           <th>Contact</th>
@@ -28,8 +27,7 @@ function App() {
     {
       data.map((item,i)=>
       
-      <tr>
-        <td>{i+1}</td>
+      <tr key={i}>
       <td>{item.name}</td>
       <td>{item.Email}</td>
       <td>{item.contact}</td>

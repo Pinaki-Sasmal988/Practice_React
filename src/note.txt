@@ -1,0 +1,5 @@
+useEffect() work on both state and props;
+class component by default all react life cycle method and state ,props,core component.
+but functional component not available thats why we use hooks{ {useState,or useEffect etc..}}
+useEffect also work on both sate and props
+componentWillUnmount run just before of delete component....
