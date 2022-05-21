@@ -1,49 +1,37 @@
-import React from 'react';
+import React,{useRef} from 'react';
 //import User from './User';
 import './App.css';
-import { Table } from 'react-bootstrap';
+//import { Table } from 'react-bootstrap';
 //import Stud from './Stud';
 //import Array_List from './Array_List';
+//import Child from './Child';
+//import Them from './Them';
+  import RefApplication from './RefApplication';
+  import ControlComponent from './ControlComponent';
 
 function App() {
- //const data=['p','a','c'];
- const data=[
-   {name:"pinaki",Email:"pinaki@sasmal", contact:"1111"},
-   {name:"payan",Email:"pmal@sasmal", contact:"1111"},
-   {name:"surya",Email:"asps@sasmal", contact:"1212"}
-
- ]
-  return (
-    <div className="App">
-      
-      <Table>
-        <tbody>
-        <tr>
-        <th>ID</th>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Contact</th>
-
-        </tr>
-    {
-      data.map((item,i)=>
-      
-      <tr>
-        <td>{i+1}</td>
-      <td>{item.name}</td>
-      <td>{item.Email}</td>
-      <td>{item.contact}</td>
-      </tr>
-
-  
-      )
-    }
-    </tbody>
-    </Table>
-     </div>
-      
-  );
+  let InputRef=useRef(null);
+function submit(){
+  InputRef.current.value="1000";
+  InputRef.current.style.color="red";
 
 }
 
+
+
+ //const data=['p','a','c'];
+ /*function add(value){
+   alert(value);
+ }*/
+  return (
+    <div className="App">
+      <RefApplication val={InputRef}/>
+        <button onClick={submit}>Update</button>
+       <ControlComponent></ControlComponent>
+      </div>
+  );
+  
+  
+}
+/*<Child data={add}></Child>*/
 export default App;
